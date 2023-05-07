@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Employee Database Management System - View Employee Information</title>
+        <style>
+                body {
+                        background-color: #f2f2f2;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        margin: 0;
+                        padding: 0;
+                }
+
+                h1 {
+                        color: #333;
+                        text-align: center;
+                }
+
+                .container {
+                        background-color: #fff;
+                        border-radius: 5px;
+                        box-shadow: 0 0 10px #999;
+                        margin: 20px auto;
+                        max-width: 500px;
+                        padding: 150px;
+                        text-align: center;
+                }
+
+                table {
+                        border-collapse: collapse;
+                        margin: 20px auto;
+                        max-width: 500px;
+                        width: 100%;
+                }
+
+                th, td {
+                        border: 1px solid #ddd;
+                        padding: 8px;
+                        text-align: left;
+                        vertical-align: top;
+                }
+
+                th {
+                        background-color: #f2f2f2;
+                }
+
+                button {
+                background-color: #333;
+                border: none;
+                border-radius: 3px;
+                color: #fff;
+                cursor: pointer;
+                padding: 10px 20px;
+                }
+
+                button:hover {
+                background-color: #444;
+                }
+
+                .icon {
+                display: inline-block;
+                margin-right: 10px;
+                }
+                a.back-home-btn {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+                }
+        </style>
+</head>
+<body>
+        <h1>Employee Information</h1>
+        <div class="container">
+                <table>
+                        <thead>
+                                <tr>
+                                        <th>Employee ID</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Primary Skills</th>
+                                        <th>Location</th>
+                                        <th>Pay Scale</th>
+                                        <th>Hire Date</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                        <td>{{ emp_info['emp_id'] }}</td>
+                                        <td>{{ emp_info['first_name'] }}</td>
+                                        <td>{{ emp_info['last_name'] }}</td>
+                                        <td>{{ emp_info['pri_skill'] }}</td>
+                                        <td>{{ emp_info['location'] }}</td>
+                                        <td>{{ emp_info['pay_scale'] }}</td>
+                                        <td>{{ emp_info['hire_date'] }}</td>
+                                </tr>
+                        </tbody>
+                </table>
+                <form action="/view_employee_Page" method="GET">
+                        <button type="submit">View Another Employee</button>
+                </form>
+                <h1> </h1>
+                <a href="/"class="back-home-btn"><button>Back to Home
+                        <span class="icon">&lt;</span>
+                </button></a>
+        </div>
+</body>
+</html>

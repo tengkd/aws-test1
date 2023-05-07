@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Employee Database Management System - Edit Employee Information</title>
+        <style>
+            body {
+                background-color: #f2f2f2;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                margin: 0;
+                padding: 0;
+            }
+                
+            h1, h2 {
+                color: #333;
+                text-align: center;
+            }
+                
+            form {
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 10px #999;
+                margin: 20px auto;
+                max-width: 500px;
+                padding: 20px;
+            }
+                
+            label, input {
+                display: block;
+                margin-bottom: 10px;
+            }
+                
+            label {
+                font-weight: bold;
+            }
+                
+            input[type="number"], input[type="text"], input[type="date"], input[type="file"] {
+                border: none;
+                border-radius: 3px;
+                box-shadow: 0 0 5px #ccc;
+                padding: 10px;
+                width: 100%;
+            }
+                
+            button[type="submit"] {
+                background-color: #333;
+                border: none;
+                border-radius: 3px;
+                color: #fff;
+                cursor: pointer;
+                padding: 10px 20px;
+            }
+                
+            button[type="submit"]:hover {
+                background-color: #444;
+            }
+            button {
+            background-color: #333;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px 20px;
+            }
+
+            button:hover {
+            background-color: #444;
+            }
+
+            .icon {
+            display: inline-block;
+            margin-right: 10px;
+            }
+            a.back-home-btn {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            }
+        </style>
+</head>
+<body>
+        <h1>Employee Database</h1>
+        <hr>
+        <h2>Edit Employee Information</h2>
+        <a href="/"class="back-home-btn"><button>Back to Home
+            <span class="icon">&lt;</span>
+        </button></a>
+        <form action="/edit_employee" method="POST">
+                <label for="emp_id">Employee ID:</label>
+                <input type="text" name="emp_id" id="emp_id" required>
+
+                <label for="pri_skill">Primary Skills:</label>
+                <input type="text" name="pri_skill" id="pri_skill" required>
+
+                <label for="location">Location:</label>
+                <input type="text" name="location" id="location" required>
+
+                <label for="pay_scale">Pay Scale:</label>
+                <input type="text" name="pay_scale" id="pay_scale" required>
+
+                <button type="submit">Save Changes</button>
+        </form>
+</body>
+</html>

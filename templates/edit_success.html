@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Edit Employee Data - Success</title>
+        <style>
+                body {
+                        background-color: #f2f2f2;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        margin: 0;
+                        padding: 0;
+                }
+
+                h1, h2 {
+                        color: #333;
+                        text-align: center;
+                }
+
+                form {
+                        background-color: #fff;
+                        border-radius: 5px;
+                        box-shadow: 0 0 10px #999;
+                        margin: 20px auto;
+                        max-width: 500px;
+                        padding: 20px;
+                }
+
+                label, input {
+                        display: block;
+                        margin-bottom: 10px;
+                }
+
+                label {
+                        font-weight: bold;
+                }
+
+                input[type="number"], input[type="text"], input[type="date"], input[type="file"] {
+                        border: none;
+                        border-radius: 3px;
+                        box-shadow: 0 0 5px #ccc;
+                        padding: 10px;
+                        width: 100%;
+                }
+
+                button[type="submit"] {
+                        background-color: #333;
+                        border: none;
+                        border-radius: 3px;
+                        color: #fff;
+                        cursor: pointer;
+                        padding: 10px 20px;
+                }
+
+                button[type="submit"]:hover {
+                        background-color: #444;
+                }
+                button {
+                background-color: #333;
+                border: none;
+                border-radius: 3px;
+                color: #fff;
+                cursor: pointer;
+                padding: 10px 20px;
+                }
+
+                button:hover {
+                background-color: #444;
+                }
+
+                .icon {
+                display: inline-block;
+                margin-right: 10px;
+                }
+                a.back-home-btn {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+                }
+        </style>
+</head>
+<body>
+        <h1>Edit Employee Data - Success</h1>
+        <form>
+                <label for="emp_id">Employee ID:</label>
+                <input type="text" name="emp_id" id="emp_id" value="{{ emp_info['emp_id'] }}" disabled>
+
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" id="first_name" value="{{ emp_info['first_name'] }}" disabled>
+
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" id="last_name" value="{{ emp_info['last_name'] }}" disabled>
+
+                <label for="pri_skill">Primary Skills:</label>
+                <input type="text" name="pri_skill" id="pri_skill" value="{{ emp_info['pri_skill'] }}" disabled>
+
+                <label for="location">Location:</label>
+                <input type="text" name="location" id="location" value="{{ emp_info['location'] }}" disabled>
+
+                <label for="pay_scale">Pay Scale:</label>
+                <input type="text" name="pay_scale" id="pay_scale" value="{{ emp_info['pay_scale'] }}" disabled>
+
+                <label for="hire_date">Hire Date:</label>
+                <input type="date" name="hire_date" id="hire_date" value="{{ emp_info['hire_date'] }}" disabled>
+        </form>
+        <a href="/"class="back-home-btn"><button>Back to Home
+                        <span class="icon">&lt;</span>
+                </button></a>
+</body>
+</html>

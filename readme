@@ -1,0 +1,16 @@
+# Install flask on EC2 
+# Either add "sudo" before all commands or use "sudo su" first
+# Amazon Linux 2023
+
+#!/bin/bash
+sudo yum update -y
+sudo yum install git -y
+git clone https://github.com/lowchoonkeat/aws-live.git
+cd aws-live
+sudo yum install python-pip -y
+sudo pip3 install flask pymysql boto3
+sudo python3 EmpApp.py
+
+
+
+
