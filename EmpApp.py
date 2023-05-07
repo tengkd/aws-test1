@@ -33,9 +33,9 @@ def add_employee_page():
 def edit_employee_page():
     return render_template('EditEmpInfo.html')
 
-@app.route("/about", methods=['POST'])
+@app.route("/about", methods=['GET', 'POST'])
 def about():
-    return render_template('www.intellipaat.com')
+    return render_template('cc_aboutus.html')
 
 
 @app.route("/addemp", methods=['POST'])
